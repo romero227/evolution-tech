@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
-    <header>
 
-
-        <h1>Cursos</h1>
-        <label for=""><a href="">Home</a></label> | <label for=""><a href="">Cursos</a></label> | <label for=""><a href="">Sobre nós</a></label>
-
+    <header class="course-header">
+        <h2 id="bemvindo"></h2>
+        <button onclick="logout()" class="btn-logout">Logout</button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="index.html">Nossos Cursos</a>
+            <a href="../sobre.html">Sobre Nós</a>
+            <a href="../contato.html">Contato</a>
+        </nav>
     </header>
 
-    <div class="course-card" onclick="redirectToVideo"><br>
-        
-        <figure>
-            <img src="word.jpeg" alt="curso1" class="course-Icon"><label class="texto"> Domine Python em 5 minutos!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">20h</p>
-        </figure>
-        <figure>
-            <img src="OIP.webp" alt="curso2" class="course-Icon"><label class="texto"> Aprenda C e crie os seus próprios programas!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">30h</p>
-        </figure>
-        <figure>
-            <img src="8-1.jpg" alt="curso3" class="course-Icon"><label class="texto"> Aprenda LUA e nunca mais se esqueça!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">15h</p>
-        </figure>
-        <br>
-        <figure>
-            <img src="./img.jpeg" alt="curso3" class="course-Icon"><label class="texto"> Word para iniciantes!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">12h</p>
-        </figure>
-        <figure>
-            <img src="./img.jpeg" alt="curso3" class="course-Icon"><label class="texto"> Princípios do PowerPoint!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">12h</p>
-        </figure>
-        <figure>
-            <img src="./image2.png" alt="curso3" class="course-Icon"><label class="texto"> Curso de digitalização!</label><br>
-            <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
-            <br><p style="color: black; text-align: left;">12h</p>
-        </figure><br>
+    <main>
+        <h1>Conteúdo do Curso</h1>
+        <p>Parabéns, você acessou seu curso!</p>
 
-    </div>
+        <div class="course-grid">
+
+            <div class="course-card">
+                <img src="img/word.jpeg" alt="curso1" class="course-Icon">
+                <label class="texto"> Domine Python em 5 minutos!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">20h</p>
+            </div>
+            <div class="course-card">
+                <img src="img/OIP.webp" alt="curso2" class="course-Icon">
+                <label class="texto"> Aprenda C e crie os seus próprios programas!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">30h</p>
+            </div>
+            <div class="course-card">
+                <img src="img/8-1.jpg" alt="curso3" class="course-Icon">
+                <label class="texto"> Aprenda LUA e nunca mais se esqueça!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">15h</p>
+            </div>
+            <div class="course-card">
+                <img src="./img.jpeg" alt="curso4" class="course-Icon">
+                <label class="texto"> Word para iniciantes!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">12h</p>
+            </div>
+            <div class="course-card">
+                <img src="./img.jpeg" alt="curso5" class="course-Icon">
+                <label class="texto"> Princípios do PowerPoint!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">12h</p>
+            </div>
+            <div class="course-card">
+                <img src="./image2.png" alt="curso6" class="course-Icon">
+                <label class="texto"> Curso de digitalização!</label>
+                <button><a href="https://www.youtube.com/watch?v=DvJNboajYy0" class="button">Clique aqui!</a></button>
+                <p style="color: black; text-align: left;">12h</p>
+            </div>
+            <div class="course-card">
+                <img src="img/quiz-icon.png" alt="Quiz Icon" class="course-Icon">
+                <label class="texto">Teste seus conhecimentos com nosso Quiz!</label>
+                <button><a href="Quiz/quiz.html" class="button">Fazer Quiz</a></button>
+                <p style="color: black; text-align: left;">1h</p>
+            </div>
+        </div>
+    </main>
+    <script src="cursos.js"></script>
 </body>
+
 </html>

@@ -1,334 +1,343 @@
+/* Estilos gerais para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #000;
-    transition: 0.3s;
-     display:flexbox;
+  font-family: Arial, sans-serif; /* Define a família da fonte padrão */
+  margin: 0; /* Remove a margem externa padrão do navegador */
+  padding: 0; /* Remove o preenchimento interno padrão do navegador */
+  background-color: #fff; /* Cor de fundo branca */
+  color: #000; /* Cor do texto preta */
+  transition: 0.3s; /* Adiciona uma transição suave para mudanças de cor (útil para o modo escuro) */
 }
 
+/* Um contêiner principal, se necessário, para envolver o conteúdo */
 .main-content-wrapper {
-    margin: 0 auto;    
-    position: relative;
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  position: relative; /* Define um contexto de posicionamento para elementos filhos */
 }
 
+/* Estilização do cabeçalho */
 header {
-    background-color: #f57c00;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  background-color: #f57c00; /* Cor de fundo laranja */
+  color: white; /* Cor do texto branca */
+  padding: 10px 20px; /* Espaçamento interno (10px em cima/baixo, 20px nas laterais) */
+  display: flex; /* Ativa o layout flexbox para alinhar os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  width: 100%; /* Ocupa 100% da largura da tela */
+  gap: 15px; /* Espaçamento entre os elementos do cabeçalho */
 }
 
 header h1,
 header nav {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+/* Estilização da barra de navegação */
 nav {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex; /* Usa flexbox para os links */
+  justify-content: center; /* Centraliza os links de navegação */
+  flex-wrap: wrap; /* Permite que os links quebrem a linha */
+  gap: 10px; /* Espaço entre os links */
 }
 
+/* Estilização dos links da navegação */
 nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
-    white-space: nowrap;
-    padding: 5px 0;
+  color: white; /* Cor do texto branca */
+  margin: 0 10px; /* Margem horizontal entre os links */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 5px 0; /* Preenchimento vertical */
 }
 
+/* Efeito ao passar o mouse sobre os links da navegação */
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
 
+/* Estilização das logos no cabeçalho */
 .logo-esq,
 .logo-dir {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 80px;
-    height: auto;
-    z-index: 10;
+  max-width: 150px; /* Largura máxima da logo */
+  height: auto; /* Altura se ajusta automaticamente */
 }
 
 .logo-esq {
-    left: 45px;
-    height: 72px;
-    width: 150px;
-}
-
-.logo-dir {
-    right: 100px;
+  height: 72px; /* Altura fixa para a logo da esquerda */
 }
 
 .logo-esq img,
 .logo-dir img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%; /* Imagem ocupa toda a largura do contêiner da logo */
+  height: auto; /* Altura se ajusta para manter a proporção */
 }
 
+/* Contêiner para os botões do cabeçalho (Cadastro, Login) */
 .header-btns {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 10;
-    flex-wrap: nowrap;
+  display: flex; /* Usa flexbox */
+  gap: 10px; /* Espaço entre os botões */
+  align-items: center; /* Alinha verticalmente */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: center; /* Centraliza os botões */
 }
 
+/* Estilo padrão para os botões do cabeçalho */
 .btn-header {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-weight: bold;
-    line-height: 1;
-    background-color: #f57c00;
-    color: white;
-    border: 2px solid #f57c00;
-    white-space: nowrap;
+  padding: 8px 12px; /* Preenchimento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mãozinha ao passar por cima */
+  text-decoration: none; /* Sem sublinhado */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transição suave para o efeito hover */
+  font-weight: bold; /* Texto em negrito */
+  line-height: 1; /* Altura da linha */
+  background-color: #f57c00; /* Fundo laranja */
+  color: white; /* Texto branco */
+  border: 2px solid #f57c00; /* Borda laranja */
+  white-space: nowrap; /* Impede que o texto do botão quebre em duas linhas */
 }
 
 .btn-header:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
 }
 
+/* Estilo específico para o botão "JÁ SOU ALUNO(A)" */
 .btn-aluno {
-    background-color: transparent;
-    border-color: white;
-    color: white;
+  background-color: transparent;
+  border-color: white;
+  color: white;
 }
 
 .btn-aluno:hover {
-    background-color: white;
-    color: #f57c00;
-    border-color: white;
+  background-color: white;
+  color: #f57c00;
+  border-color: white;
 }
 
+/* Seção da imagem principal abaixo do cabeçalho */
 .imagem-header {
-    min-height: 150px; 
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    overflow: hidden; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+  min-height: 150px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* A imagem dentro da seção */
 .imagem-header img {
-    width: 100%; 
-    height: auto; 
-    object-fit: contain; 
-    display: block;
-    margin: 0; 
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
 }
 
+/* Contêiner para os pontos de navegação de um slideshow (não implementado no HTML) */
 .dot-container {
-    text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
 }
 
 .dot {
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
+/* Estilo do ponto ativo ou quando o mouse está sobre ele */
 .active,
 .dot:hover {
-    background-color: #f57c00;
+  background-color: #f57c00;
 }
 
+/* Seção de conteúdo principal na parte inferior */
 .hero-bottom {
-    background-color: white;
-    padding: 30px 20px;
-    text-align: center;
+  background-color: white;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .hero-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Título principal da seção inferior */
 .hero-bottom h1 {
-    font-size: 3em;
-    color: #000;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    display: inline-block;
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  display: inline-block;
 }
 
+/* Parágrafos da seção inferior */
 .hero-bottom p {
-    color: #555;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 30px;
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
+/* Botão de ação principal (ex: "Cadastre-Se Agora!") */
 .btn {
-    background-color: #f57c00;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 15px;
+  background-color: #f57c00;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .btn:hover {
-    background-color: #e65100;
+  background-color: #e65100;
 }
 
+/* Botão secundário (ex: "Já sou Aluno") */
 .btn-secundario-laranja {
-    background-color: transparent;
-    color: #f57c00;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: 1px solid #f57c00;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
+  background-color: transparent;
+  color: #f57c00;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: 1px solid #f57c00;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-secundario-laranja:hover {
-    background-color: #fff3e0;
+  background-color: #fff3e0;
 }
 
+/* Seção de benefícios com os cards */
 .beneficios {
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px; 
-    background-color: #ffebd2;
-    margin-top: 0;
-    flex-wrap: wrap;
-    gap: 15px; 
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  background-color: #ffebd2;
+  margin-top: 0;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
+/* Estilo individual de cada card de benefício */
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #333;
-    flex-shrink: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  flex-shrink: 0;
 }
 
+/* Título dentro do card */
 .card h3 {
-    color: #f57c00;
+  color: #f57c00;
 }
 
+/* Estilização do rodapé */
 footer {
-    background-color: #f57c00;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: auto;
+  background-color: #f57c00;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: auto;
 }
 
+/* Media Query para telas menores (tablets) - Design Responsivo */
 @media (max-width: 768px) {
-    .header-btns {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        right: auto;
-        padding: 0 10px;
-    }
+  .header-btns {
+    width: 100%;
+    order: 4; /* Garante que os botões fiquem por último */
+  }
 
-    header {
-        padding-bottom: 10px;
-    }
-    
-    .logo-esq, .logo-dir {
-        position: static;
-        transform: none;
-        max-width: 65px;
-        margin: 5px auto;
-    }
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    header h1 {
-        font-size: 2.2em;
-        white-space: normal;
-    }
+  .logo-esq,
+  .logo-dir {
+    max-width: 65px;
+    order: 1; /* Garante que a logo venha primeiro */
+  }
 
-    .hero-bottom h1 {
-        font-size: 2.5em;
-    }
+  header h1 {
+    order: 2; /* Título depois da logo */
+  }
 
-    .hero-bottom p {
-        font-size: 1em;
-    }
+  nav {
+    order: 3; /* Navegação depois do título */
+  }
 
-    .btn, .btn-secundario-laranja {
-        font-size: 16px;
-        padding: 12px 20px;
-        margin-bottom: 10px;
-    }
+  header h1 {
+    font-size: 2.2em;
+    white-space: normal;
+  }
 
-    .card {
-        width: 90%;
-        max-width: 300px;
-    }
+  .hero-bottom h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-bottom p {
+    font-size: 1em;
+  }
+
+  .btn,
+  .btn-secundario-laranja {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
+/* Media Query para telas ainda menores (celulares) - Design Responsivo */
 @media (max-width: 480px) {
-    nav a {
-        font-size: 14px;
-        margin: 0 5px;
-    }
+  nav a {
+    font-size: 14px;
+    margin: 0 5px;
+  }
 
-    .header-btns .btn-header {
-        width: 100%;
-        max-width: 250px;
-        margin: 5px auto;
-    }
+  .header-btns .btn-header {
+    width: 100%;
+    max-width: 250px;
+    margin: 5px auto;
+  }
 
-    .hero-bottom h1 {
-        font-size: 2em;
-    }
+  .hero-bottom h1 {
+    font-size: 2em;
+  }
 }
-/* ------------------------------- */
+
 /* ESTILOS DO MODO ESCURO          */
-/* ------------------------------- */
 body.dark-mode {
   background-color: #121212;
   color: #f0f0f0;
@@ -391,7 +400,7 @@ body.dark-mode .imagem-header img {
   opacity: 0.85;
 }
 
-/* Botão do modo escuro */
+/* Botão para alternar modo escuro/claro */
 #toggle-dark-mode {
   position: absolute;
   top: 10px;
@@ -404,6 +413,7 @@ body.dark-mode .imagem-header img {
   cursor: pointer;
   font-size: 14px;
   transition: 0.3s;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 #toggle-dark-mode:hover {
@@ -411,4 +421,34 @@ body.dark-mode .imagem-header img {
   color: #f57c00;
 }
 
+/* Estilos para o fundo da página de contato */
+body.contato-page {
+  background-color: #ffffff;
+  background-image: radial-gradient(
+    circle at center,
+    #ff8c2b 0%,
+    #ffc499 50%,
+    #ffffff 100%
+  );
+}
 
+/* Estilos para o botão "Curso de Programação" na index.html */
+.btn-programacao {
+  background-color: #007bff; /* A nice blue */
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: block; /* Make it a block element to center */
+  margin: 30px auto; /* Center it horizontally with some vertical margin */
+  width: fit-content; /* Adjust width to content */
+  transition: background-color 0.3s ease;
+}
+
+.btn-programacao:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

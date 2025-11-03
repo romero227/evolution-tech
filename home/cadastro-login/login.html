@@ -8,6 +8,7 @@
 
 </head>
 <body>
+  
   <div class="tela de login">
     <h1>Faça login</h1>
     <form action="/login" method="post">
@@ -22,5 +23,17 @@
     <p>Não tem uma conta? <a href="cadastro.html" class="link-cadastro" style=" color: #0a0a0a;"> Cadastre-se aqui</a></p>
 
   </div>
+  <h1>Escolha um curso:</h1>
+  <button onclick="acessarCurso()">Curso de Programação</button>
+  <script>
+    function acessarCurso() {
+      // Verifica se está logado
+      if (localStorage.getItem('usuarioLogado')) {
+        window.location.href = 'curso.html';
+      } else {
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
 </body>
 </html>

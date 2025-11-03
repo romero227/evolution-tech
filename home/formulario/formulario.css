@@ -1,51 +1,118 @@
 body {
-  text-align: center;
+  text-align: center; /* Centraliza o texto de todos os elementos filhos */
+  background-color: #ffffff; /* Cor de fundo base, caso o gradiente não carregue */
+  font-family: Arial, sans-serif; /* Define a família de fontes padrão */
+  /* Remove margens e garante que a altura seja a da tela */
+  margin: 0; /* Remove a margem padrão do navegador */
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+
+  /* Configuração do Degradê */
   background-color: #ffffff;
-  font-family: Arial, sans-serif;
+  background-image: radial-gradient(
+    circle at center,
+    #ff8c2b 0%,
+    #ffc499 50%,
+    #ffffff 100%
+  );
 }
 
+/* Contêiner principal que envolve todo o formulário */
 .form-container {
-  text-align: center;
-  max-width: 500px;
-  margin: 20px auto;
-  background-color: #ff9e33;
-  border: 2px solid #f28705;
-  padding: 15px;
-  border-radius: 8px;
+  text-align: center; /* Centraliza o conteúdo interno */
+  max-width: 800px; /* Largura máxima do formulário, aumentada para acomodar campos lado a lado */
+  margin: 20px auto; /* Centraliza o formulário na página com uma margem superior/inferior de 20px */
+  background-color: #f4f4f4; /* Cor de fundo cinza claro para o contêiner */
+  border: 1px solid #f28705; /* Borda laranja ao redor do formulário */
+  padding: 15px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
 }
 
+/* Cabeçalho do formulário (onde fica o título e a legenda) */
 .form-header {
-  text-align: center;
-  background-color: #f28705;
-  border: 1px solid #f28705;
-  padding: 10px;
-  margin: -15px -15px 15px -15px;
-  border-top-left-radius: 6px;
+  display: flex; /* Ativa o Flexbox para alinhar itens lado a lado */
+  align-items: center; /* Alinha a imagem e o texto verticalmente ao centro */
+  gap: 15px; /* Espaço entre a imagem e o bloco de texto */
+  background-color: #f4f4f4; /* Mesma cor de fundo do contêiner */
+  padding: 10px; /* Espaçamento interno */
+  margin: -15px -15px 15px -15px; /* Margens negativas para que o cabeçalho ocupe todo o espaço superior do contêiner, sem o padding */
+  border-top-left-radius: 6px; /* Arredonda os cantos superiores */
   border-top-right-radius: 6px;
 }
 
+/* Estilo para a imagem da logo no formulário */
+.form-logo {
+  height: 80px; /* Define uma altura fixa para a logo */
+  width: auto; /* A largura se ajusta para manter a proporção */
+  /* 
+    Este filtro CSS complexo "colore" a imagem. 
+    Ele inverte a cor (branco vira preto), aplica uma cor sépia, e então rotaciona a matiz (hue) 
+    e ajusta saturação/brilho para chegar ao tom de laranja desejado (#f57c00).
+  */
+  filter: invert(55%) sepia(98%) saturate(1352%) hue-rotate(359deg)
+    brightness(99%) contrast(101%);
+}
+
+/* Contêiner para o texto do cabeçalho */
+.form-header-text {
+  flex: 1; /* Faz o contêiner do texto ocupar o espaço restante */
+  text-align: center; /* Centraliza o texto (título e legenda) horizontalmente */
+}
+
+/* Estilo do título principal do formulário */
 .form-header h2 {
-  text-align: center;
-  margin: 0;
+  text-align: center; /* Mantém o texto centralizado dentro do seu espaço */
+  margin: 0; /* Remove margens padrão do h2 */
+  font-weight: normal; /* Usar 'normal' ou 'bold' é mais comum que 'lighter' */
+  color: #f28705; /* Cor laranja para o título */
+  font-size: 24px; /* Tamanho da fonte do título */
+  position: relative; /* Permite o ajuste fino da posição */
+  left: -20px; /* Move o título 20px para a esquerda. Ajuste este valor conforme necessário. */
 }
 
+/* Estilo da legenda (subtítulo) do formulário */
+.form-header legend {
+  font-size: 14px; /* Tamanho menor para o subtítulo */
+  color: #000000; /* Cor cinza escuro para o subtítulo */
+  margin-top: 5px; /* Espaço entre o título e o subtítulo */
+  border: none; /* Remove a borda padrão da tag legend */
+}
+
+/* Nova regra para a linha do formulário */
+.form-row {
+  display: flex; /* Alinha os campos filhos horizontalmente */
+  gap: 20px; /* Cria um espaço de 20px entre os campos */
+  flex-wrap: wrap; /* Permite que os campos quebrem para a linha de baixo em telas menores */
+}
+
+/* Agrupador para cada campo do formulário (label + input) */
 .form-group {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  margin-bottom: 15px; /* Espaço entre os grupos de campos */
+  display: flex; /* Ativa o layout flexbox */
+  flex-direction: column; /* Organiza os itens (label e input) em coluna */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  flex: 1; /* Faz com que cada grupo ocupe o espaço disponível igualmente na linha */
+  min-width: 200px; /* Largura mínima reduzida para melhor responsividade */
 }
 
+/* Estilo para as etiquetas (labels) dos campos */
 .form-group label {
-  text-align: left;
-  margin-bottom: 5px;
-  font-weight: bold;
+  text-align: left; /* Alinha o texto da label à esquerda */
+  margin-bottom: 5px; /* Espaço entre a label e o campo de entrada */
+  font-weight: normal; /* Peso da fonte normal */
+  color: #e98000; /* Cor laranja para o texto da label */
 }
 
+/* Estilo para as mensagens de erro de validação */
+.mensagem-erro {
+  color: red; /* Cor vermelha para indicar erro */
+  font-size: 14px; /* Tamanho da fonte da mensagem */
+  font-weight: normal; /* Peso da fonte normal */
+}
+
+/* Estilo geral para os campos de entrada, área de texto e seletor */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
-.form-group input[type="password"],
 .form-group textarea,
 .form-group select {
   width: 100%;
@@ -53,24 +120,95 @@ body {
   box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
+/* Estilo para um grupo de botões de rádio (se houver) */
 .radio-group {
-  text-align: center;
-  flex: 3;
+  text-align: center; /* Centraliza o conteúdo */
+  flex: 3; /* Define a proporção de crescimento em um container flex */
 }
 
+/* Rodapé do formulário (onde ficam os botões de enviar/cancelar) */
 .form-footer {
-  text-align: center;
-  border: 1px solid #f28705;
-  background-color: #f28705;
-  padding: 10px;
-  margin: 15px -15px -15px -15px;
-  border-bottom-left-radius: 6px;
+  text-align: center; /* Centraliza os botões */
+  background-color: #f4f4f4; /* Mesma cor de fundo do contêiner */
+  padding: 10px; /* Espaçamento interno */
+  margin: 15px -15px -15px -15px; /* Margens negativas para ocupar todo o espaço inferior */
+  border-bottom-left-radius: 6px; /* Arredonda os cantos inferiores */
   border-bottom-right-radius: 6px;
 }
 
+/* Estilo base para os botões do rodapé */
+.form-footer input[type="button"],
+.form-footer input[type="reset"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin: 0 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    transform 0.2s;
+}
+
+/* Estilo específico para o botão Enviar (#ienviar) */
+#ienviar {
+  background-color: #f57c00; /* Laranja principal */
+  color: white;
+  border-color: #f57c00;
+}
+
+/* Efeito HOVER para o botão Enviar */
+#ienviar:hover {
+  background-color: #e65100; /* Laranja mais escuro */
+  border-color: #e65100;
+  transform: translateY(-2px); /* Efeito de levantar um pouco */
+}
+
+/* Estilo específico para o botão Cancelar (#btnCancelar) */
+#btnCancelar {
+  background-color: #e0e0e0; /* Cinza claro */
+  color: #333;
+}
+
+/* Efeito HOVER para o botão Cancelar */
+#btnCancelar:hover {
+  background-color: #bdbdbd; /* Cinza um pouco mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Estilo padrão para todos os campos de entrada, seletores e áreas de texto */
 input,
 select,
 textarea {
-  border: 2px solid #000000;
-  color: #000000;
+  border: 1px solid #f28705; /* Borda laranja */
+  color: #000000; /* Cor do texto digitado */
+  font-weight: normal; /* Peso da fonte normal */
+}
+
+/*ESTILOS PARA RESPONSIVIDADE (TELAS MENORES)*/
+
+/* Aplica estas regras quando a tela tiver 600px de largura ou menos (ex: celulares) */
+@media (max-width: 600px) {
+  /* Ajusta o contêiner do formulário para ocupar mais espaço na tela */
+  .form-container {
+    margin: 10px; /* Reduz a margem lateral */
+    padding: 10px; /* Reduz o espaçamento interno */
+  }
+
+  /* Ajusta o cabeçalho para empilhar a logo e o texto */
+  .form-header {
+    flex-direction: column; /* Coloca a logo acima do texto */
+    margin: -10px -10px 15px -10px; /* Ajusta a margem negativa para o novo padding */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .form-header-text {
+    text-align: center; /* Garante que o texto do cabeçalho fique centralizado */
+  }
+
+  /* Faz com que os campos em uma linha fiquem um embaixo do outro */
+  .form-row {
+    flex-direction: column; /* Empilha os campos verticalmente */
+    gap: 0; /* Remove o espaço entre os campos que agora estão empilhados */
+  }
 }

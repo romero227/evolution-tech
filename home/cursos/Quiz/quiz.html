@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,16 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 </head>
+
 <body>
 
-  <audio id="hover-sound" src="som/hover.mp3" preload="auto"></audio>
-  <audio id="correct-sound" src="som/Check mark sound effect [v-aqBz6C4D4].mp3" preload="auto"></audio>
-  <audio id="wrong-sound" src="som/Resposta errada Efeito sonoro [_VPhOMVr13c].mp3" preload="auto"></audio>
-  <audio id="celebration-sound" src="som/FNAF_ Kids Cheering - Gaming Sound Effect (HD) [9bnUWuAO0oU].mp3" preload="auto"></audio>
+  <audio id="hover-sound" src="som/hover.mp3" preload="auto"></audio> <!-- Assuming som directory exists -->
+  <audio id="correct-sound" src="som/Check_mark_sound_effect.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="som/Resposta_errada_Efeito_sonoro.mp3" preload="auto"></audio>
+  <audio id="celebration-sound" src="som/FNAF_Kids_Cheering_-_Gaming_Sound_Effect.mp3" preload="auto"></audio>
 
   <div class="quiz-container">
-    
+
     <div class="question active">
       <img src="img/Design_sem_nome_2.png">
       <h2>O que é hardware?</h2>
@@ -43,7 +45,7 @@
       <div class="option" data-correct="false">Mostrar imagens</div>
       <div class="option" data-correct="false">Conectar à internet</div>
       <div class="option" data-correct="false">Salvar arquivos</div>
-       <div class="option" data-correct="true">Processar informações</div>
+      <div class="option" data-correct="true">Processar informações</div>
       <div class="feedback"></div>
     </div>
 
@@ -107,7 +109,7 @@
       <div class="feedback"></div>
     </div>
 
-    
+
     <div class="question">
       <img src="img/virus-damaging-hardware-featured.jpg">
       <h2>O que é um vírus de computador?</h2>
@@ -117,7 +119,7 @@
       <div class="option" data-correct="true">Programa que causa danos</div>
       <div class="feedback"></div>
     </div>
-   
+
     <div class="question">
       <img src="img/senha-forte.jpg">
       <h2>O que é uma senha forte?</h2>
@@ -127,7 +129,7 @@
       <div class="option" data-correct="false">Senha com apenas números</div>
       <div class="feedback"></div>
     </div>
-    
+
     <div class="question">
       <img src="img/4-tipos-de-backup-para-empresas-adotarem-ja.jpeg">
       <h2>O que é um backup?</h2>
@@ -138,7 +140,7 @@
       <div class="feedback"></div>
     </div>
 
-   
+
     <div class="question end">
       <img src="img/Captura de tela 2025-09-26 163624.png">
       <h2>🎉 Parabéns! Você terminou o quiz!</h2>
@@ -148,4 +150,5 @@
 
   <script src="quiz.js"></script>
 </body>
+
 </html>
