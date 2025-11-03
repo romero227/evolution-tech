@@ -1,0 +1,463 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+.main-content-wrapper {
+    margin: 0 auto;    
+    position: relative;
+}
+
+header {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header h1,
+header nav {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: normal;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-esq,
+.logo-dir {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 80px;
+    height: auto;
+    z-index: 10;
+}
+
+.logo-esq {
+    left: 45px;
+    height: 72px;
+    width: 150px;
+}
+
+.logo-dir {
+    right: 100px;
+}
+
+.logo-esq img,
+.logo-dir img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-btns {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 10;
+    flex-wrap: nowrap;
+}
+
+.btn-header {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-weight: bold;
+    line-height: 1;
+    background-color: #f57c00;
+    color: white;
+    border: 2px solid #f57c00;
+    white-space: normal;
+}
+
+.btn-header:hover {
+    background-color: white;
+    color: #f57c00;
+    border-color: white;
+}
+
+.btn-aluno {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.btn-aluno:hover {
+    background-color: white;
+    color: #f57c00;
+    border-color: white;
+}
+
+.imagem-header {
+    min-height: 150px; 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.imagem-header img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    display: block;
+    margin: 0; 
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #f57c00;
+}
+
+.hero-bottom {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-bottom h1 {
+    font-size: 3em;
+    color: #000;
+    margin-bottom: 10px;
+    white-space: normal;
+    display: inline-block;
+}
+
+.hero-bottom p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #f57c00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.btn:hover {
+    background-color: #e65100;
+}
+
+.btn-secundario-laranja {
+    background-color: transparent;
+    color: #f57c00;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 1px solid #f57c00;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secundario-laranja:hover {
+    background-color: #fff3e0;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px; 
+    background-color: #ffebd2;
+    margin-top: 0;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    flex-shrink: 0;
+    
+    /* HOVER - Transição suave para os efeitos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    /* O CARD SE LEVANTA LIGEIRAMENTE */
+    transform: translateY(-5px); 
+    /* A SOMBRA FICA MAIS PROEMINENTE */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+}
+
+.card h3 {
+    color: #f57c00;
+}
+
+/* Seção Hero Bottom (Conteúdo Principal) */
+.hero-bottom {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-bottom h1 {
+    font-size: 3em;
+    color: #000;
+    margin-bottom: 10px;
+    white-space: normal; 
+    display: block;
+}
+
+.hero-bottom h2 {
+    font-size: 1.8em;
+}
+
+.hero-bottom p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left; 
+}
+
+.btn {
+    background-color: #f57c00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Transição para o hover */
+}
+
+.btn:hover {
+    background-color: #e65100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-2px);
+}
+
+.btn-secundario-laranja {
+    background-color: transparent;
+    color: #f57c00;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 1px solid #f57c00;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secundario-laranja:hover {
+    background-color: #fff3e0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f57c00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------
+   MEDIA QUERIES - TELAS MÉDIAS (TABLETS E CELULARES GRANDES)
+   ------------------------------------------- */
+@media (max-width: 992px) {
+    /* Reorganização do cabeçalho para telas médias */
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 10px;
+    }
+    
+    .logo-esq {
+        margin: 0 auto 10px auto;
+        order: 1;
+        width: 100%; 
+        text-align: center;
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+        margin: 10px 0;
+        order: 2;
+    }
+    
+    .header-btns {
+        margin-top: 15px;
+        order: 3;
+    }
+
+    /* Navegação */
+    nav {
+        order: 4;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    /* Mostrar o botão hambúrguer */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 15px;
+    }
+    
+    header {
+        align-items: flex-start; /* Ajuste para o menu-toggle */
+        padding: 15px 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    /* Menu Colapsável - Escondido por padrão (nav-hidden) */
+    nav {
+        width: 100%;
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #e65100;
+        padding-bottom: 10px;
+    }
+
+    nav a {
+        padding: 10px 0;
+        width: 90%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Botões do Hero e Hero Bottom se tornam blocos */
+    .btn, .btn-secundario-laranja {
+        font-size: 16px;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        margin-right: 0; 
+        display: block; 
+        width: 100%;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* -------------------------------------------
+   MEDIA QUERIES - TELAS PEQUENAS (CELULARES)
+   ------------------------------------------- */
+@media (max-width: 480px) {
+    
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    /* Cards de Benefícios em Largura Total */
+    .card {
+        width: 95%; 
+        max-width: none;
+    }
+    
+    /* Botões do header (CADASTRE-SE e JÁ SOU ALUNO) */
+    .header-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .header-btns .btn-header {
+        width: 100%;
+        max-width: 200px;
+    }
+}
